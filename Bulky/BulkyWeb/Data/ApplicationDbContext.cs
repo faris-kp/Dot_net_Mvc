@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BulkyWeb.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BulkyWeb.Data
 {
@@ -7,6 +8,29 @@ namespace BulkyWeb.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options) 
         {
             
+        }
+        public DbSet<Category> Categories { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Category>().HasData(
+                new Category
+                {
+                    Id = 1,
+                    Name = "Action",
+                    DiplayOrder = 1,
+                }, new Category
+                {
+                Id = 2,
+                    Name = "History",
+                    DiplayOrder = 2,
+                }, new Category
+                {
+                Id = 3,
+                    Name = "abcd",
+                    DiplayOrder = 3,
+                }
+                );
         }
     }
 }
