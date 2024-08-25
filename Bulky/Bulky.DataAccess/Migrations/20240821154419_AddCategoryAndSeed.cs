@@ -4,10 +4,10 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace BulkyWeb.Migrations
+namespace Bulky.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class feedCategory : Migration
+    public partial class AddCategoryAndSeed : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

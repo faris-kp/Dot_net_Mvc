@@ -4,14 +4,98 @@
     "C:\\Dot_Net_mvc\\Bulky\\BulkyWeb\\BulkyWeb.csproj": {}
   },
   "projects": {
-    "C:\\Dot_Net_mvc\\Bulky\\BulkyWeb\\BulkyWeb.csproj": {
+    "C:\\Dot_Net_mvc\\Bulky\\Bulky.DataAccess\\Bulky.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dot_Net_mvc\\Bulky\\BulkyWeb\\BulkyWeb.csproj",
-        "projectName": "BulkyWeb",
-        "projectPath": "C:\\Dot_Net_mvc\\Bulky\\BulkyWeb\\BulkyWeb.csproj",
+        "projectUniqueName": "C:\\Dot_Net_mvc\\Bulky\\Bulky.DataAccess\\Bulky.DataAccess.csproj",
+        "projectName": "Bulky.DataAccess",
+        "projectPath": "C:\\Dot_Net_mvc\\Bulky\\Bulky.DataAccess\\Bulky.DataAccess.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Dot_Net_mvc\\Bulky\\BulkyWeb\\obj\\",
+        "outputPath": "C:\\Dot_Net_mvc\\Bulky\\Bulky.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Dot_Net_mvc\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {
+                "projectPath": "C:\\Dot_Net_mvc\\Bulky\\Bulky.Models\\Bulky.Models.csproj"
+              },
+              "C:\\Dot_Net_mvc\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj": {
+                "projectPath": "C:\\Dot_Net_mvc\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Dot_Net_mvc\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dot_Net_mvc\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
+        "projectName": "Bulky.Models",
+        "projectPath": "C:\\Dot_Net_mvc\\Bulky\\Bulky.Models\\Bulky.Models.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Dot_Net_mvc\\Bulky\\Bulky.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +130,141 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Dot_Net_mvc\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dot_Net_mvc\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
+        "projectName": "Bulky.Utility",
+        "projectPath": "C:\\Dot_Net_mvc\\Bulky\\Bulky.Utility\\Bulky.Utility.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Dot_Net_mvc\\Bulky\\Bulky.Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Dot_Net_mvc\\Bulky\\BulkyWeb\\BulkyWeb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dot_Net_mvc\\Bulky\\BulkyWeb\\BulkyWeb.csproj",
+        "projectName": "BulkyWeb",
+        "projectPath": "C:\\Dot_Net_mvc\\Bulky\\BulkyWeb\\BulkyWeb.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Dot_Net_mvc\\Bulky\\BulkyWeb\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Dot_Net_mvc\\Bulky\\Bulky.DataAccess\\Bulky.DataAccess.csproj": {
+                "projectPath": "C:\\Dot_Net_mvc\\Bulky\\Bulky.DataAccess\\Bulky.DataAccess.csproj"
+              },
+              "C:\\Dot_Net_mvc\\Bulky\\Bulky.Models\\Bulky.Models.csproj": {
+                "projectPath": "C:\\Dot_Net_mvc\\Bulky\\Bulky.Models\\Bulky.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.7, )"
@@ -62,7 +281,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.4, )"
             }
           },
           "imports": [
