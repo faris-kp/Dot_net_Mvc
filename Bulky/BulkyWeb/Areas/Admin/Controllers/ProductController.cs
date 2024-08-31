@@ -23,7 +23,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
             return View(objProductList);
         }
 
-        public IActionResult Create()
+        public IActionResult Upsert(int? id)
         {
             ProductVM productVM = new()
             {
@@ -35,10 +35,21 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 }),
                 Product = new Product()
             };
-            return View(productVM);
+            if(id ==null || id == 0)
+            {
+                //Create
+                return View(productVM);
+            }
+            else
+            {
+                //Update
+                productVM.Product = _unitOfWork.Product.Get(u=>u.Id==id);
+                return View(productVM);
+            }
+            
         }
         [HttpPost]
-        public IActionResult Create(ProductVM productVM)
+        public IActionResult Upsert(ProductVM productVM,IFormFile? file)
         {
             if (ModelState.IsValid)
             {
@@ -61,34 +72,7 @@ namespace BulkyWeb.Areas.Admin.Controllers
            
 
         }
-        public IActionResult Edit(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            Product? productEdit = _unitOfWork.Product.Get(u => u.Id == id);
-            if (productEdit == null)
-            {
-                return NotFound();
-            }
-            return View(productEdit);
-        }
-        [HttpPost]
-        public IActionResult Edit(Product obj)
-        {
-
-            if (ModelState.IsValid)
-            {
-                _unitOfWork.Product.Update(obj);
-                _unitOfWork.Save();
-                TempData["success"] = "Product Updated Successfully";
-                return RedirectToAction("Index");
-            }
-
-            return View();
-        }
-
+        
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
