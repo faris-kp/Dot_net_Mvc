@@ -29,6 +29,13 @@ namespace Bulky.DataAccess.Repository
         public T Get(Expression<Func<T, bool>> filter, string? includePropeties = null)
         {
             IQueryable<T> query = dbSet;
+            if (!string.IsNullOrEmpty(includePropeties))
+            {
+                foreach (var propeties in includePropeties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(propeties);
+                }
+            }
             query = query.Where(filter);
             return query.FirstOrDefault();
         }
