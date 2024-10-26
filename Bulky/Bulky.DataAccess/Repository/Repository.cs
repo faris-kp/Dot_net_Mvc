@@ -26,9 +26,18 @@ namespace Bulky.DataAccess.Repository
           dbSet.Add(entity);
         }
 
-        public T Get(Expression<Func<T, bool>> filter, string? includePropeties = null)
+        public T Get(Expression<Func<T, bool>> filter, string? includePropeties = null, bool tracked = false)
         {
-            IQueryable<T> query = dbSet;
+            IQueryable<T> query;
+            if (tracked)
+            {
+                query = dbSet;
+            }
+            else
+            {
+                query = dbSet.AsNoTracking();   
+            }
+            query = query.Where(filter);
             if (!string.IsNullOrEmpty(includePropeties))
             {
                 foreach (var propeties in includePropeties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
@@ -36,13 +45,18 @@ namespace Bulky.DataAccess.Repository
                     query = query.Include(propeties);
                 }
             }
-            query = query.Where(filter);
+            
             return query.FirstOrDefault();
         }
 
-        public IEnumerable<T> GetAll(string? includePropeties = null)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter,string? includePropeties = null)
         {
             IQueryable<T> query = dbSet;
+            if(filter != null)
+            {
+                query = query.Where(filter);
+            }
+            
             if (!string.IsNullOrEmpty(includePropeties))
             {
                 foreach (var propeties in includePropeties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)) 
