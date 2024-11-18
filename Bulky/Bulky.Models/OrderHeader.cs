@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Bulky.Models
 {
@@ -25,6 +26,8 @@ namespace Bulky.Models
         public string? Carrier { get; set; }
         public DateTime PaymentDate { get; set; }
         public DateOnly PaymenDueDate { get; set; }
+
+        public string? SessionId { get; set; }
         public string? PaymentIntendId { get; set; }
 
         [Required]
