@@ -115,6 +115,7 @@ namespace BulkyWeb.Areas.Customer.Controllers
         public IActionResult OrderConfirmation(int id)
         {
             return View(id);
+            //HttpContext.Session.Clear(); if add the order confirmation we can add this
         }
 		public IActionResult Plus(int cartId)
         {
