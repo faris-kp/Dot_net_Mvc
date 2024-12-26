@@ -21,7 +21,7 @@ namespace Bulky.DataAccess.Repository
             var objFromDb = _db.Products.FirstOrDefault(u => u.Id == obj.Id);
             if (objFromDb != null)
             {
-                objFromDb.Title = obj.Title;    
+                objFromDb.Title = obj.Title;     
                 objFromDb.Description = obj.Description;
                 objFromDb.Author = obj.Author;
                 objFromDb.ISBN = obj.ISBN;  
